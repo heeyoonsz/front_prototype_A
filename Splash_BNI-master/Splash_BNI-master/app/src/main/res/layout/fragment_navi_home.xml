@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".NaviHome">
+
+
+    <TextView
+        android:id="@+id/handtext"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="57dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/Main_title"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contracttext"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/highlight_title"
+        android:textColor="@color/highligh"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@+id/handtext"
+        app:layout_constraintTop_toTopOf="@+id/handtext" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="50dp"
+        android:scrollbarStyle="outsideInset"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handtext"
+        app:queryBackground="@color/search"
+        app:queryHint="@string/search" />
+
+    <TextView
+        android:id="@+id/camera_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/addcamera"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view" />
+
+    <TextView
+        android:id="@+id/photo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/addphoto"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_imageButton" />
+
+    <ImageButton
+        android:id="@+id/camera_imageButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="180dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/teal_200"
+        android:baselineAlignBottom="false"
+        android:drawable="@drawable/button_resource"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_text"
+        tools:src="@drawable/camera_24" />
+
+    <ImageButton
+        android:id="@+id/photo_imageButton"
+        android:layout_width="180dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="5dp"
+        android:drawable="@drawable/button_resource"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_text"
+        tools:src="@drawable/insert_photo_24"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
